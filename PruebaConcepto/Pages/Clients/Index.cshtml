@@ -1,0 +1,25 @@
+﻿@page
+@model PruebaConcepto.Pages.Clients.IndexModel
+@{
+}
+
+<br>
+<h2>Lista de datos</h2>
+<a class='btn btn-primary btn-sm' href='/Clients/Create'>Nuevo dato</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>dato</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.listDatos)
+		{
+			<tr>
+				<td>@item.id_datos</td>
+				<td>@item.dato</td>
+			</tr>	
+		}
+	</tbody>
+</table>
